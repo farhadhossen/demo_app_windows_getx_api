@@ -9,10 +9,12 @@ class HomeController extends GetxController with StateMixin<dynamic> {
 
   var isLoading = true.obs;
   // var recipeList = <AllRecipeModel2>[].obs;
-  var recipeList = List<AllRecipeModel2>.empty(growable: true).obs;
+  //var recipeList = List<AllRecipeModel2>.empty(growable: true).obs;
   // var recipeList = <AllRecipeModel2>().obs;
 
   // RxList<AllRecipeModel2> recipeList = RxList<AllRecipeModel2>();
+
+  Rx<AllRecipeModel2> allRecipeModel2 = AllRecipeModel2().obs;
 
   @override
   void onInit() {
@@ -27,7 +29,8 @@ class HomeController extends GetxController with StateMixin<dynamic> {
       var recipes = await AllRecipeProvider.fetchRecipes();
       if(recipes != null){
         print("hellooww:: "+recipes.toString());
-       recipeList.add(recipes);
+        allRecipeModel2.value = recipes;
+        //update();
       }
     }finally{
       isLoading(false);

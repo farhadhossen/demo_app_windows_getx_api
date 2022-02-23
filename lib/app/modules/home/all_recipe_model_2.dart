@@ -8,6 +8,11 @@ AllRecipeModel2 allRecipeModel2FromJson(String str) => AllRecipeModel2.fromJson(
 
 String allRecipeModel2ToJson(AllRecipeModel2 data) => json.encode(data.toJson());
 
+
+// List<AllRecipeModel2> allRecipeModel2FromJson(String str) => List<AllRecipeModel2>.from(json.decode(str).map((x) => AllRecipeModel2.fromJson(x)));
+//
+// String allRecipeModel2ToJson(List<AllRecipeModel2> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+
 class AllRecipeModel2 {
   AllRecipeModel2({
     this.status,
