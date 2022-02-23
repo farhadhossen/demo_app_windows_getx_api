@@ -17,28 +17,28 @@ class RecipeListView extends StatelessWidget {
               return Container(
                 child: Text(homeController.allRecipeModel2.value.results![0].title.toString())
               );
-              // return ListView.builder(
-              //     itemCount: homeController.recipeList.length,
-              //     itemBuilder: (context, index){
-              //       return Column(
-              //         children: [
-              //           Row(
-              //             children: [
-              //               Container(
-              //                 width: 150,
-              //                 height: 100,
-              //                 margin: EdgeInsets.fromLTRB(16, 8, 8, 8),
-              //                 child: Column(
-              //                   children: [
-              //                     Text(homeController.recipeList)
-              //                   ],
-              //                 ),
-              //               )
-              //             ],
-              //           )
-              //         ],
-              //       );
-              //     });
+            // return ListView.builder(
+            //     itemCount: homeController.allRecipeModel2.value.results!.length,
+            //     itemBuilder: (context, index){
+            //       return Column(
+            //         children: [
+            //           Row(
+            //             children: [
+            //               Container(
+            //                 width: 150,
+            //                 height: 100,
+            //                 margin: EdgeInsets.fromLTRB(16, 8, 8, 8),
+            //                 child: Column(
+            //                   children: [
+            //                     Text(homeController.allRecipeModel2.value.results![index].title.toString())
+            //                   ],
+            //                 ),
+            //               )
+            //             ],
+            //           )
+            //         ],
+            //       );
+            //     });
           }),
         ),
       ),
